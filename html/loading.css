@@ -1,12 +1,40 @@
-.line {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    background-color: #4b9cdb;
-}
-.load-wrapp:last-child {margin-right: 0;}
+$anima
+	animation-name loadingC
+	animation-timing-function ease
+	animation-iteration-count infinite
+	
+anima(delay, duration = .6s)
+	@extend $anima
+	animation-delay delay
+	animation-duration duration
 
-.load-3 .line:nth-last-child(1) {animation: loadingC .6s .1s linear infinite;}
-.load-3 .line:nth-last-child(2) {animation: loadingC .6s .2s linear infinite;}
-.load-3 .line:nth-last-child(3) {animation: loadingC .6s .3s linear infinite;}
+.load
+	text-align center
+	margin auto
+	position absolute
+	top 50%
+	left 50%
+	transform translate(-50%,-50%)
+
+.line
+	display: inline-block
+	width: 15px
+	height: 15px
+	border-radius: 50%
+	background-color: red
+	&:nth-of-type(1)
+		anima(.1s)
+	&:nth-of-type(2)
+		anima(.2s)
+		margin 0 3px
+	&:nth-of-type(3)
+		anima(.3s)
+
+@keyframes loadingC
+	0
+		transform: translate(0, 0)
+	50%
+		transform: translate(0, 15px)
+	100%
+		transform: translate(0, 0)
+

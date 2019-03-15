@@ -2,15 +2,66 @@
 <html>
 <head>
         <title>Login Page</title>
+       <!-- <style>
+           img{
+               width: 100%
+           }
+       </style> -->
+       <link rel="stylesheet" type="text/css" href="login.css">
 </head>
 <body>
-    <p>
-        <img src = 'LOGO.png'>
-    </p>
-    <div class ="container">
+    <div class = 'image'>
+        <img src = 'LOGO.png' width="200" height="200">
+    </div>
+    <!-- <div class ="container">
         <input type ='text' placeholder="Username">
         <input type ='text' placeholder="Password">
     </div>
+   
+        <p> Sign Up </p>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
     
+     -->
+     <div class="container">
+            <form action="/action_page.php">
+              <div class="row">
+                <!-- <h2 style="text-align:center">Foodi Login</h2> -->
+          
+                <div class="col">
+                  <a href="#" class="fb btn">
+                    <i class="fa fa-facebook fa-fw"></i> Sign up with Facebook
+                  </a>
+                  <a href="#" class="twitter btn">
+                    <i class="fa fa-twitter fa-fw"></i> Sign up with Twitter
+                  </a>
+                  <a href="#" class="google btn">
+                    <i class="fa fa-google fa-fw"></i> Sign up with Google+
+                  </a>
+                </div>
+          
+                <div class="col">
+                  <div class="hide-md-lg">
+                    <p>Or sign in manually:</p>
+                  </div>
+          
+                  <input type="text" name="username" placeholder="Username" required>
+                  <input type="password" name="password" placeholder="Password" required>
+                  <input type="submit" value="Login">
+                </div>
+          
+              </div>
+            </form>
+          </div>
+          
+          <div class="bottom-container">
+            <div class="row">
+              <div class="col">
+               
+              <div class="col">
+                <a href="#" style="color:white" class="btn">Forgot password?</a>
+              </div>
+            </div>
+          </div>
 </body>
 </html>
